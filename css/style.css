@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +17,8 @@
     --light-bg: #f8fafc;
     --glass: rgba(253, 220, 4, 0.15);
     --glass-border: rgba(253, 220, 4, 0.3);
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -26,6 +29,7 @@ body {
     min-height: 100vh;
 }
 
+/* Animated Background */
 .animated-bg {
     position: fixed;
     top: 0;
@@ -44,6 +48,7 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+/* Navigation */
 .glass-nav {
     position: fixed;
     top: 0;
@@ -123,22 +128,6 @@ body {
     background: var(--glass);
 }
 
-.primary-cta {
-    background: var(--secondary);
-    color: var(--white);
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    font-weight: 600;
-}
-
-.primary-cta:hover {
-    background: var(--primary);
-    color: var(--accent);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(237, 28, 36, 0.3);
-}
-
 .donate-btn {
     background: linear-gradient(135deg, var(--primary), #FFD700);
     color: var(--accent);
@@ -160,6 +149,7 @@ body {
     background: linear-gradient(135deg, #FFD700, var(--primary));
 }
 
+/* Hero Section */
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -305,7 +295,7 @@ body {
     font-weight: 500;
 }
 
-/* Section Styles */
+/* Section Base Styles */
 .section {
     padding: 100px 0;
 }
@@ -329,6 +319,7 @@ body {
     padding: 0 2rem;
 }
 
+/* Center-aligned Section Headers */
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -351,7 +342,18 @@ body {
     line-height: 1.6;
 }
 
-/* Cards */
+/* Center-aligned Specific Sections */
+.donation-content,
+#board .section-header,
+#mission .section-header {
+    text-align: center;
+}
+
+.donation-content .donate-btn {
+    margin: 0 auto;
+}
+
+/* Cards Grid Layouts */
 .mission-vision-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -363,7 +365,7 @@ body {
     background: var(--white);
     padding: 3rem 2.5rem;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow);
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
@@ -453,7 +455,6 @@ body {
 .donation-section {
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     color: var(--white);
-    text-align: center;
     padding: 80px 0;
 }
 
@@ -508,7 +509,7 @@ body {
     background: var(--white);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow);
     transition: transform 0.3s ease;
 }
 
@@ -557,6 +558,7 @@ body {
     margin: 1.5rem 0;
     font-size: 0.9rem;
     color: var(--text-light);
+    flex-wrap: wrap;
 }
 
 .event-meta i {
@@ -580,7 +582,7 @@ body {
     background: var(--white);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow);
     transition: transform 0.3s ease;
 }
 
@@ -631,11 +633,6 @@ body {
 .status-completed {
     background: var(--secondary);
     color: var(--white);
-}
-
-.status-upcoming {
-    background: #e2e8f0;
-    color: var(--text);
 }
 
 /* Partners Section */
@@ -689,7 +686,7 @@ body {
     background: var(--white);
     border-radius: 20px;
     padding: 2.5rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow);
     transition: all 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
     text-align: center;
@@ -697,7 +694,7 @@ body {
 
 .board-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-hover);
 }
 
 .board-photo {
@@ -770,7 +767,7 @@ body {
     border-bottom: none;
 }
 
-/* Membership Section */
+/* Membership Section - Aligned Buttons */
 .membership-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -781,10 +778,13 @@ body {
     background: var(--white);
     padding: 3rem 2.5rem;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow);
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .membership-card:hover {
@@ -809,6 +809,7 @@ body {
     list-style: none;
     text-align: left;
     margin-bottom: 2.5rem;
+    flex-grow: 1;
 }
 
 .membership-features li {
@@ -821,7 +822,12 @@ body {
     border-bottom: none;
 }
 
-/* CTA Section */
+.membership-button-container {
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+/* Button Styles */
 .cta-glow {
     background: var(--secondary);
     color: var(--white);
@@ -833,6 +839,8 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(237, 28, 36, 0.3);
+    width: 100%;
+    max-width: 200px;
 }
 
 .cta-glow:hover {
@@ -937,6 +945,7 @@ body {
     opacity: 0.8;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -992,5 +1001,38 @@ body {
         width: 100px;
         height: 100px;
         font-size: 2.5rem;
+    }
+    
+    .donation-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .event-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .membership-cards,
+    .objectives-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .donation-features {
+        grid-template-columns: 1fr;
     }
 }

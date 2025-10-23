@@ -29,7 +29,7 @@
             </div>
             <div class="nav-links">
                 <a href="#about" class="nav-link">About Us</a>
-                <a href="#board" class="nav-link">Board</a>
+                <a href="#board" class="nav-link">Leadership</a>
                 <a href="#events" class="nav-link">Events</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#partners" class="nav-link">Partners</a>
@@ -103,7 +103,7 @@
     <!-- Donation Section -->
     <section class="donation-section">
         <div class="container">
-            <div class="donation-content">
+            <div class="donation-content" style="text-align: center;">
                 <h2>Support Our Community</h2>
                 <p>Your donation helps us run day-to-day operations, fund community programs, and organize events that empower Ugandans in Southwestern Ontario.</p>
                 
@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 
-                <button class="donate-btn" style="padding: 1.2rem 3rem; font-size: 1.2rem;" onclick="showDonationModal()">
+                <button class="donate-btn" style="padding: 1.2rem 3rem; font-size: 1.2rem; margin: 0 auto;" onclick="showDonationModal()">
                     <i class="fas fa-heart"></i>
                     Make a Donation
                 </button>
@@ -137,7 +137,7 @@
     <!-- Objectives Section -->
     <section id="mission" class="section section-light">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" style="text-align: center;">
                 <h2>Our Objectives</h2>
                 <p>Dedicated to creating positive change through comprehensive community programs and initiatives</p>
             </div>
@@ -193,7 +193,7 @@
     <!-- Leader Members Section -->
     <section id="board" class="section section-white">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" style="text-align: center;">
                 <h2>Our Board of Directors</h2>
                 <p>Dedicated leaders guiding the Ugandan Community of Southwestern Ontario towards growth and community excellence</p>
             </div>
@@ -596,7 +596,9 @@
                         <li>✓ Can stand for office</li>
                         <li>✓ Committee participation</li>
                     </ul>
-                    <button class="cta-glow" onclick="showMembershipApplication('Ordinary')">Apply Now</button>
+                    <div class="membership-button-container">
+                        <button class="cta-glow" onclick="window.open('https://forms.gle/B6aR79hRwWLy2oRR7', '_blank')">Apply Now</button>
+                    </div>
                 </div>
                 <div class="membership-card" data-aos="fade-up" data-aos-delay="200">
                     <h3>Associate Member</h3>
@@ -609,7 +611,9 @@
                         <li>✓ Friends of Uganda</li>
                         <li>✓ No voting rights</li>
                     </ul>
-                    <button class="cta-glow" onclick="showMembershipApplication('Associate')">Apply Now</button>
+                    <div class="membership-button-container">
+                        <button class="cta-glow" onclick="showMembershipApplication('Associate')">Apply Now</button>
+                    </div>
                 </div>
                 <div class="membership-card" data-aos="fade-up" data-aos-delay="400">
                     <h3>Honorary Member</h3>
@@ -622,7 +626,9 @@
                         <li>✓ Goodwill ambassador</li>
                         <li>✓ No membership dues</li>
                     </ul>
-                    <button class="cta-glow" onclick="showMembershipApplication('Honorary')">Learn More</button>
+                    <div class="membership-button-container">
+                        <button class="cta-glow" onclick="showMembershipApplication('Honorary')">Learn More</button>
+                    </div>
                 </div>
             </div>
         </div>
