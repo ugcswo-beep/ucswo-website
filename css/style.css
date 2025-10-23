@@ -442,9 +442,10 @@ body {
     font-size: 1.1rem;
 }
 
+/* Objectives Grid - 2x2 Layout */
 .objectives-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -455,6 +456,9 @@ body {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
     border-left: 4px solid var(--primary);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .objective-card:hover {
@@ -471,6 +475,7 @@ body {
 .objective-card p {
     line-height: 1.6;
     color: var(--text);
+    flex-grow: 1;
 }
 
 /* Values Section */
@@ -532,9 +537,12 @@ body {
 
 .donation-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     margin: 3rem 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .donation-feature {
@@ -677,6 +685,9 @@ body {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .event-card:hover {
@@ -703,6 +714,9 @@ body {
 
 .event-content {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .event-content h4 {
@@ -716,6 +730,7 @@ body {
     line-height: 1.6;
     margin-bottom: 1.5rem;
     color: var(--text);
+    flex-grow: 1;
 }
 
 .event-meta {
@@ -734,7 +749,7 @@ body {
 .event-actions {
     display: flex;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: auto;
 }
 
 /* Projects Section */
@@ -750,6 +765,9 @@ body {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -768,6 +786,9 @@ body {
 
 .project-content {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-content h4 {
@@ -781,6 +802,11 @@ body {
     line-height: 1.6;
     color: var(--text);
     margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.project-status-container {
+    margin-top: auto;
 }
 
 .project-status {
@@ -789,6 +815,9 @@ body {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
+    text-align: center;
+    width: 100%;
+    max-width: 120px;
 }
 
 .status-ongoing {
@@ -1027,6 +1056,8 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(253, 220, 4, 0.3);
+    flex: 1;
+    max-width: 200px;
 }
 
 .register-btn:hover {
@@ -1170,7 +1201,7 @@ body {
     }
     
     .donation-features {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
     
     .event-meta {
@@ -1192,6 +1223,10 @@ body {
     
     .news-subtitle {
         font-size: 1.8rem;
+    }
+    
+    .objectives-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1216,5 +1251,13 @@ body {
     
     .donation-features {
         grid-template-columns: 1fr;
+    }
+    
+    .event-actions {
+        flex-direction: column;
+    }
+    
+    .register-btn, .cta-glow {
+        max-width: 100%;
     }
 }
